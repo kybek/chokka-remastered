@@ -10,6 +10,7 @@ var seed_count := 2 setget set_seed_count, get_seed_count
 func set_color (new_color : Array) -> void:
    color = new_color
 
+
 func get_color () -> Array:
    return color
 
