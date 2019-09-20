@@ -12,22 +12,34 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "Flower",
 "language": "GDScript",
-"path": "res://src/biology/flower.gd"
+"path": "res://src/biology/Flower.gd"
 }, {
 "base": "Node",
 "class": "Genes",
 "language": "GDScript",
-"path": "res://src/biology/genes.gd"
+"path": "res://src/biology/Genes.gd"
 }, {
 "base": "Node2D",
 "class": "Seed",
 "language": "GDScript",
-"path": "res://src/biology/seed.gd"
+"path": "res://src/biology/Seed.gd"
+}, {
+"base": "Node",
+"class": "SeedBag",
+"language": "GDScript",
+"path": "res://src/seedbag/seedbag.gd"
+}, {
+"base": "Control",
+"class": "Slot",
+"language": "GDScript",
+"path": "res://src/slot/Slot.gd"
 } ]
 _global_script_class_icons={
 "Flower": "",
 "Genes": "",
-"Seed": ""
+"Seed": "",
+"SeedBag": "",
+"Slot": ""
 }
 
 [application]
