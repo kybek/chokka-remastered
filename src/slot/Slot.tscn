@@ -1,13 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://src/slot/Slot.gd" type="Script" id=1]
-[ext_resource path="res://assets/slot/Highlight.png" type="Texture" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://src/slot/Slot.gd" type="Script" id=2]
+[ext_resource path="res://assets/slot/Highlight.png" type="Texture" id=3]
 
-[node name="Slot" type="Control"]
+[node name="Slot" type="TextureRect"]
 margin_right = 64.0
 margin_bottom = 64.0
-script = ExtResource( 1 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="Highlight" type="Sprite" parent="."]
-texture = ExtResource( 2 )
+visible = false
+texture = ExtResource( 3 )
 offset = Vector2( 32, 32 )
