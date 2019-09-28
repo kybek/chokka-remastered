@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node",
+"class": "Dialogue",
+"language": "GDScript",
+"path": "res://src/GoDOS/dialogue.gd"
+}, {
 "base": "Node2D",
 "class": "Flower",
 "language": "GDScript",
@@ -33,19 +38,35 @@ _global_script_classes=[ {
 "class": "Slot",
 "language": "GDScript",
 "path": "res://src/slot/Slot.gd"
+}, {
+"base": "Reference",
+"class": "Stack",
+"language": "GDScript",
+"path": "res://src/utilities/stack/stack.gd"
 } ]
 _global_script_class_icons={
+"Dialogue": "",
 "Flower": "",
 "Genes": "",
 "Seed": "",
 "SeedBag": "",
-"Slot": ""
+"Slot": "",
+"Stack": ""
 }
 
 [application]
 
 config/name="Chokka Remastered"
 config/icon="res://icon.png"
+
+[input]
+
+next_line={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
 
 [rendering]
 
