@@ -60,6 +60,8 @@ func clear_buttons () -> void:
 	for child in get_node("DialogueBox/OptionBox").get_children():
 		get_node("DialogueBox/OptionBox").remove_child(child)
 
+func change_avatar (image_path):
+	$Avatar.set_texture(load("res://" + image_path))
 
 func on_text_change (text) -> void:
 	get_node("DialogueBox/Text").text = text
@@ -79,8 +81,11 @@ func _ready ():
 	dialogue.connect("showed_buttons", self, "show_buttons")
 	dialogue.connect("hided_buttons", self, "hide_buttons")
 	dialogue.connect("cleared_buttons", self, "clear_buttons")
+	dialogue.connect("changed_avatar", self, "change_avatar")
 	dialogue.connect("text_changed", self, "on_text_change")
 	dialogue.connect("dialogue_finished", self, "on_dialogue_finished")
+	
+	load_dialogue("res://dialogues/output.gd")
 
 
 func _process(delta):

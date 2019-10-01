@@ -10,6 +10,7 @@ var is_button_active : bool = false
 signal showed_buttons
 signal hided_buttons
 signal cleared_buttons
+signal changed_avatar (image_path)
 signal text_changed(text)
 signal dialogue_finished
 
@@ -27,6 +28,8 @@ func hide_buttons () -> void:
 func clear_buttons () -> void:
 	emit_signal("cleared_buttons")
 
+func change_avatar (image_path) -> void:
+	emit_signal("changed_avatar", image_path)
 
 func start_element() -> void:
 	assert(get_current_element().has("type"))
@@ -48,6 +51,10 @@ func start_element() -> void:
 		"call":
 			state.push("data")
 		
+		"avatar":
+			change_avatar(get_current_element()["data"])
+			state.push("end")
+
 		"if":
 			assert(get_current_element().has("var"))
 			
@@ -118,7 +125,7 @@ func next_state () -> void:
 
 
 func get_current_element () -> Dictionary:
-	var pos := data;
+	var pos := data
 	
 	for i in state.s:
 		assert(pos.has(i))

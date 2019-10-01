@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://src/GoDOS/dialogue_manager.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
 
 [node name="Dialogue Manager" type="Node2D"]
 script = ExtResource( 1 )
@@ -13,6 +14,7 @@ __meta__ = {
 color = Color( 0.231373, 0.164706, 0.164706, 1 )
 polygon = PoolVector2Array( 10, 590, 1014, 590, 1014, 420, 10, 420 )
 __meta__ = {
+"_edit_group_": true,
 "_edit_lock_": true
 }
 
@@ -37,3 +39,7 @@ margin_top = 520.0
 margin_right = 1006.0
 margin_bottom = 580.0
 alignment = 1
+
+[node name="Avatar" type="Sprite" parent="."]
+position = Vector2( 40, 390 )
+texture = ExtResource( 2 )
