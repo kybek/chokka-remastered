@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node",
+"class": "Dialogue",
+"language": "GDScript",
+"path": "res://src/GoDOS/dialogue.gd"
+}, {
 "base": "Node2D",
 "class": "Flower",
 "language": "GDScript",
@@ -28,12 +33,25 @@ _global_script_classes=[ {
 "class": "SeedBag",
 "language": "GDScript",
 "path": "res://src/seedbag/seedbag.gd"
+}, {
+"base": "TextureRect",
+"class": "Slot",
+"language": "GDScript",
+"path": "res://src/slot/Slot.gd"
+}, {
+"base": "Reference",
+"class": "Stack",
+"language": "GDScript",
+"path": "res://src/utilities/stack/stack.gd"
 } ]
 _global_script_class_icons={
+"Dialogue": "",
 "Flower": "",
 "Genes": "",
 "Seed": "",
-"SeedBag": ""
+"SeedBag": "",
+"Slot": "",
+"Stack": ""
 }
 
 [application]

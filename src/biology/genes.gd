@@ -37,3 +37,7 @@ func set_seed_count (new_seed_count : int) -> void:
 
 func get_seed_count () -> int:
    return seed_count
+
+
+func _ready ():
+   name = "Genes"
