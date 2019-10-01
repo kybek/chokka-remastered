@@ -23,11 +23,17 @@ _global_script_classes=[ {
 "class": "Seed",
 "language": "GDScript",
 "path": "res://src/biology/seed.gd"
+}, {
+"base": "Node",
+"class": "SeedBag",
+"language": "GDScript",
+"path": "res://src/seedbag/seedbag.gd"
 } ]
 _global_script_class_icons={
 "Flower": "",
 "Genes": "",
-"Seed": ""
+"Seed": "",
+"SeedBag": ""
 }
 
 [application]
