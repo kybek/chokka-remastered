@@ -81,8 +81,6 @@ func _ready ():
 	dialogue.connect("cleared_buttons", self, "clear_buttons")
 	dialogue.connect("text_changed", self, "on_text_change")
 	dialogue.connect("dialogue_finished", self, "on_dialogue_finished")
-	
-	load_dialogue("res://dialogues/example_dialogue.gd")
 
 
 func _process(delta):

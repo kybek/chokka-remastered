@@ -4,6 +4,10 @@
 
 [node name="Dialogue Manager" type="Node2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="DialogueBox" type="Polygon2D" parent="."]
 color = Color( 0.231373, 0.164706, 0.164706, 1 )
