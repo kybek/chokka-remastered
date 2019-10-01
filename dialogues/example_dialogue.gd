@@ -7,63 +7,349 @@ var data = {
                 "next": "4"
             },
             "4": {
-                "type": "line",
-                "data": "This is the first line.",
-                "next": "5"
-            },
-            "5": {
-                "type": "line",
-                "data": "This is the second line.",
-                "next": "7"
-            },
-            "7": {
                 "type": "call",
                 "data": {
                     "type": "dialogue",
                     "data": {
                         "start": {
                             "type": "start",
-                            "next": "20"
+                            "next": "165"
                         },
-                        "20": {
-                            "type": "line",
-                            "data": "11 This is the first line of the first dialogue.",
-                            "next": "21"
+                        "165": {
+                            "type": "call",
+                            "data": {
+                                "type": "avatar",
+                                "data": "assets/empty.png",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "166"
                         },
-                        "21": {
-                            "type": "line",
-                            "data": "21 This is the second line of the first dialogue.",
-                            "next": "23"
+                        "166": {
+                            "type": "call",
+                            "data": {
+                                "type": "name",
+                                "data": "null",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "end"
                         },
-                        "23": {
+                        "end": {
+                            "type": "end"
+                        }
+                    }
+                },
+                "next": "6"
+            },
+            "6": {
+                "type": "line",
+                "data": "This is the first line.",
+                "next": "7"
+            },
+            "7": {
+                "type": "line",
+                "data": "This is the second line.",
+                "next": "9"
+            },
+            "9": {
+                "type": "call",
+                "data": {
+                    "type": "dialogue",
+                    "data": {
+                        "start": {
+                            "type": "start",
+                            "next": "22"
+                        },
+                        "22": {
                             "type": "call",
                             "data": {
                                 "type": "dialogue",
                                 "data": {
                                     "start": {
                                         "type": "start",
-                                        "next": "26"
+                                        "next": "99"
                                     },
-                                    "26": {
+                                    "99": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "avatar",
+                                            "data": "assets/characters/character1/avatar.png",
+                                            "end": {
+                                                "type": "end"
+                                            }
+                                        },
+                                        "next": "100"
+                                    },
+                                    "100": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "name",
+                                            "data": "Alice the Rogue",
+                                            "end": {
+                                                "type": "end"
+                                            }
+                                        },
+                                        "next": "end"
+                                    },
+                                    "end": {
+                                        "type": "end"
+                                    }
+                                }
+                            },
+                            "next": "24"
+                        },
+                        "24": {
+                            "type": "line",
+                            "data": "Now using Alice",
+                            "next": "26"
+                        },
+                        "26": {
+                            "type": "call",
+                            "data": {
+                                "type": "dialogue",
+                                "data": {
+                                    "start": {
+                                        "type": "start",
+                                        "next": "103"
+                                    },
+                                    "103": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "avatar",
+                                            "data": "assets/characters/character1/sad_avatar.png",
+                                            "end": {
+                                                "type": "end"
+                                            }
+                                        },
+                                        "next": "104"
+                                    },
+                                    "104": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "name",
+                                            "data": "Alice the Rogue",
+                                            "end": {
+                                                "type": "end"
+                                            }
+                                        },
+                                        "next": "end"
+                                    },
+                                    "end": {
+                                        "type": "end"
+                                    }
+                                }
+                            },
+                            "next": "28"
+                        },
+                        "28": {
+                            "type": "line",
+                            "data": "Now using SadAlice",
+                            "next": "30"
+                        },
+                        "30": {
+                            "type": "call",
+                            "data": {
+                                "type": "dialogue",
+                                "data": {
+                                    "start": {
+                                        "type": "start",
+                                        "next": "165"
+                                    },
+                                    "165": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "avatar",
+                                            "data": "assets/empty.png",
+                                            "end": {
+                                                "type": "end"
+                                            }
+                                        },
+                                        "next": "166"
+                                    },
+                                    "166": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "name",
+                                            "data": "null",
+                                            "end": {
+                                                "type": "end"
+                                            }
+                                        },
+                                        "next": "end"
+                                    },
+                                    "end": {
+                                        "type": "end"
+                                    }
+                                }
+                            },
+                            "next": "32"
+                        },
+                        "32": {
+                            "type": "line",
+                            "data": "11 This is the first line of the first dialogue.",
+                            "next": "33"
+                        },
+                        "33": {
+                            "type": "line",
+                            "data": "21 This is the second line of the first dialogue.",
+                            "next": "35"
+                        },
+                        "35": {
+                            "type": "call",
+                            "data": {
+                                "type": "dialogue",
+                                "data": {
+                                    "start": {
+                                        "type": "start",
+                                        "next": "38"
+                                    },
+                                    "38": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "dialogue",
+                                            "data": {
+                                                "start": {
+                                                    "type": "start",
+                                                    "next": "121"
+                                                },
+                                                "121": {
+                                                    "type": "call",
+                                                    "data": {
+                                                        "type": "avatar",
+                                                        "data": "assets/characters/character2/avatar.png",
+                                                        "end": {
+                                                            "type": "end"
+                                                        }
+                                                    },
+                                                    "next": "122"
+                                                },
+                                                "122": {
+                                                    "type": "call",
+                                                    "data": {
+                                                        "type": "name",
+                                                        "data": "Bob the Builder",
+                                                        "end": {
+                                                            "type": "end"
+                                                        }
+                                                    },
+                                                    "next": "end"
+                                                },
+                                                "end": {
+                                                    "type": "end"
+                                                }
+                                            }
+                                        },
+                                        "next": "40"
+                                    },
+                                    "40": {
+                                        "type": "line",
+                                        "data": "Now using Bob",
+                                        "next": "42"
+                                    },
+                                    "42": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "dialogue",
+                                            "data": {
+                                                "start": {
+                                                    "type": "start",
+                                                    "next": "125"
+                                                },
+                                                "125": {
+                                                    "type": "call",
+                                                    "data": {
+                                                        "type": "avatar",
+                                                        "data": "assets/characters/character2/sad_avatar.png",
+                                                        "end": {
+                                                            "type": "end"
+                                                        }
+                                                    },
+                                                    "next": "126"
+                                                },
+                                                "126": {
+                                                    "type": "call",
+                                                    "data": {
+                                                        "type": "name",
+                                                        "data": "Bob the Builder",
+                                                        "end": {
+                                                            "type": "end"
+                                                        }
+                                                    },
+                                                    "next": "end"
+                                                },
+                                                "end": {
+                                                    "type": "end"
+                                                }
+                                            }
+                                        },
+                                        "next": "44"
+                                    },
+                                    "44": {
+                                        "type": "line",
+                                        "data": "Now using SadBob",
+                                        "next": "46"
+                                    },
+                                    "46": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "dialogue",
+                                            "data": {
+                                                "start": {
+                                                    "type": "start",
+                                                    "next": "165"
+                                                },
+                                                "165": {
+                                                    "type": "call",
+                                                    "data": {
+                                                        "type": "avatar",
+                                                        "data": "assets/empty.png",
+                                                        "end": {
+                                                            "type": "end"
+                                                        }
+                                                    },
+                                                    "next": "166"
+                                                },
+                                                "166": {
+                                                    "type": "call",
+                                                    "data": {
+                                                        "type": "name",
+                                                        "data": "null",
+                                                        "end": {
+                                                            "type": "end"
+                                                        }
+                                                    },
+                                                    "next": "end"
+                                                },
+                                                "end": {
+                                                    "type": "end"
+                                                }
+                                            }
+                                        },
+                                        "next": "48"
+                                    },
+                                    "48": {
                                         "type": "line",
                                         "data": "12 This is the first line of the second dialogue.",
-                                        "next": "27"
+                                        "next": "49"
                                     },
-                                    "27": {
+                                    "49": {
                                         "type": "line",
                                         "data": "22 This is the second line of the second dialogue.",
-                                        "next": "29"
+                                        "next": "51"
                                     },
-                                    "29": {
+                                    "51": {
                                         "type": "call",
                                         "data": {
                                             "type": "button",
                                             "data": {
                                                 "start": {
                                                     "type": "start",
-                                                    "next": "44"
+                                                    "next": "76"
                                                 },
-                                                "44": {
+                                                "76": {
                                                     "type": "line",
                                                     "data": "This is the content of the first button.",
                                                     "next": "end"
@@ -73,15 +359,15 @@ var data = {
                                                 }
                                             },
                                             "options": {
-                                                "46": {
+                                                "78": {
                                                     "type": "option",
                                                     "var": "Opt11",
                                                     "data": {
                                                         "start": {
                                                             "type": "start",
-                                                            "next": "47"
+                                                            "next": "79"
                                                         },
-                                                        "47": {
+                                                        "79": {
                                                             "type": "line",
                                                             "data": "11O This is the first option of the first button.",
                                                             "next": "end"
@@ -91,15 +377,15 @@ var data = {
                                                         }
                                                     }
                                                 },
-                                                "48": {
+                                                "80": {
                                                     "type": "option",
                                                     "var": "Opt21",
                                                     "data": {
                                                         "start": {
                                                             "type": "start",
-                                                            "next": "49"
+                                                            "next": "81"
                                                         },
-                                                        "49": {
+                                                        "81": {
                                                             "type": "line",
                                                             "data": "21O This is the second option of the first button.",
                                                             "next": "end"
@@ -111,17 +397,17 @@ var data = {
                                                 }
                                             }
                                         },
-                                        "next": "31"
+                                        "next": "53"
                                     },
-                                    "31": {
+                                    "53": {
                                         "type": "if",
                                         "var": "Opt11",
                                         "data": {
                                             "start": {
                                                 "type": "start",
-                                                "next": "32"
+                                                "next": "54"
                                             },
-                                            "32": {
+                                            "54": {
                                                 "type": "line",
                                                 "data": "You choose Opt11.",
                                                 "next": "end"
@@ -130,17 +416,17 @@ var data = {
                                                 "type": "end"
                                             }
                                         },
-                                        "next": "34"
+                                        "next": "56"
                                     },
-                                    "34": {
+                                    "56": {
                                         "type": "if",
                                         "var": "Opt21",
                                         "data": {
                                             "start": {
                                                 "type": "start",
-                                                "next": "35"
+                                                "next": "57"
                                             },
-                                            "35": {
+                                            "57": {
                                                 "type": "line",
                                                 "data": "You choose Opt21.",
                                                 "next": "end"
@@ -149,23 +435,147 @@ var data = {
                                                 "type": "end"
                                             }
                                         },
-                                        "next": "37"
+                                        "next": "59"
                                     },
-                                    "37": {
+                                    "59": {
                                         "type": "call",
                                         "data": {
                                             "type": "dialogue",
                                             "data": {
                                                 "start": {
                                                     "type": "start",
-                                                    "next": "40"
+                                                    "next": "62"
                                                 },
-                                                "40": {
+                                                "62": {
+                                                    "type": "call",
+                                                    "data": {
+                                                        "type": "dialogue",
+                                                        "data": {
+                                                            "start": {
+                                                                "type": "start",
+                                                                "next": "143"
+                                                            },
+                                                            "143": {
+                                                                "type": "call",
+                                                                "data": {
+                                                                    "type": "avatar",
+                                                                    "data": "assets/characters/character3/avatar.png",
+                                                                    "end": {
+                                                                        "type": "end"
+                                                                    }
+                                                                },
+                                                                "next": "144"
+                                                            },
+                                                            "144": {
+                                                                "type": "call",
+                                                                "data": {
+                                                                    "type": "name",
+                                                                    "data": "Clyde the Assassin",
+                                                                    "end": {
+                                                                        "type": "end"
+                                                                    }
+                                                                },
+                                                                "next": "end"
+                                                            },
+                                                            "end": {
+                                                                "type": "end"
+                                                            }
+                                                        }
+                                                    },
+                                                    "next": "64"
+                                                },
+                                                "64": {
+                                                    "type": "line",
+                                                    "data": "Now using Clyde",
+                                                    "next": "66"
+                                                },
+                                                "66": {
+                                                    "type": "call",
+                                                    "data": {
+                                                        "type": "dialogue",
+                                                        "data": {
+                                                            "start": {
+                                                                "type": "start",
+                                                                "next": "147"
+                                                            },
+                                                            "147": {
+                                                                "type": "call",
+                                                                "data": {
+                                                                    "type": "avatar",
+                                                                    "data": "assets/characters/character3/sad_avatar.png",
+                                                                    "end": {
+                                                                        "type": "end"
+                                                                    }
+                                                                },
+                                                                "next": "148"
+                                                            },
+                                                            "148": {
+                                                                "type": "call",
+                                                                "data": {
+                                                                    "type": "name",
+                                                                    "data": "Clyde the Assassin",
+                                                                    "end": {
+                                                                        "type": "end"
+                                                                    }
+                                                                },
+                                                                "next": "end"
+                                                            },
+                                                            "end": {
+                                                                "type": "end"
+                                                            }
+                                                        }
+                                                    },
+                                                    "next": "68"
+                                                },
+                                                "68": {
+                                                    "type": "line",
+                                                    "data": "Now using SadClyde",
+                                                    "next": "70"
+                                                },
+                                                "70": {
+                                                    "type": "call",
+                                                    "data": {
+                                                        "type": "dialogue",
+                                                        "data": {
+                                                            "start": {
+                                                                "type": "start",
+                                                                "next": "165"
+                                                            },
+                                                            "165": {
+                                                                "type": "call",
+                                                                "data": {
+                                                                    "type": "avatar",
+                                                                    "data": "assets/empty.png",
+                                                                    "end": {
+                                                                        "type": "end"
+                                                                    }
+                                                                },
+                                                                "next": "166"
+                                                            },
+                                                            "166": {
+                                                                "type": "call",
+                                                                "data": {
+                                                                    "type": "name",
+                                                                    "data": "null",
+                                                                    "end": {
+                                                                        "type": "end"
+                                                                    }
+                                                                },
+                                                                "next": "end"
+                                                            },
+                                                            "end": {
+                                                                "type": "end"
+                                                            }
+                                                        }
+                                                    },
+                                                    "next": "72"
+                                                },
+                                                "72": {
                                                     "type": "line",
                                                     "data": "13 This is the first line of the third dialogue.",
-                                                    "next": "41"
+                                                    "next": "73"
                                                 },
-                                                "41": {
+                                                "73": {
                                                     "type": "line",
                                                     "data": "23 This is the second line of the third dialogue.",
                                                     "next": "end"
@@ -189,23 +599,34 @@ var data = {
                         }
                     }
                 },
-                "next": "9"
+                "next": "11"
             },
-            "9": {
+            "11": {
                 "type": "call",
                 "data": {
                     "type": "dialogue",
                     "data": {
                         "start": {
                             "type": "start",
-                            "next": "60"
+                            "next": "92"
                         },
-                        "60": {
+                        "92": {
+                            "type": "call",
+                            "data": {
+                                "type": "avatar",
+                                "data": "assets/empty.png",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "93"
+                        },
+                        "93": {
                             "type": "line",
                             "data": "14 This is the first line of the third dialogue.",
-                            "next": "61"
+                            "next": "94"
                         },
-                        "61": {
+                        "94": {
                             "type": "line",
                             "data": "24 This is the second line of the third dialogue.",
                             "next": "end"
@@ -215,18 +636,18 @@ var data = {
                         }
                     }
                 },
-                "next": "11"
+                "next": "13"
             },
-            "11": {
+            "13": {
                 "type": "call",
                 "data": {
                     "type": "button",
                     "data": {
                         "start": {
                             "type": "start",
-                            "next": "52"
+                            "next": "84"
                         },
-                        "52": {
+                        "84": {
                             "type": "line",
                             "data": "This is the content of the second button.",
                             "next": "end"
@@ -236,15 +657,15 @@ var data = {
                         }
                     },
                     "options": {
-                        "54": {
+                        "86": {
                             "type": "option",
                             "var": "Opt12",
                             "data": {
                                 "start": {
                                     "type": "start",
-                                    "next": "55"
+                                    "next": "87"
                                 },
-                                "55": {
+                                "87": {
                                     "type": "line",
                                     "data": "12O This is the first option of the second button.",
                                     "next": "end"
@@ -254,15 +675,15 @@ var data = {
                                 }
                             }
                         },
-                        "56": {
+                        "88": {
                             "type": "option",
                             "var": "Opt22",
                             "data": {
                                 "start": {
                                     "type": "start",
-                                    "next": "57"
+                                    "next": "89"
                                 },
-                                "57": {
+                                "89": {
                                     "type": "line",
                                     "data": "22O This is the second option of the second button.",
                                     "next": "end"
@@ -274,17 +695,17 @@ var data = {
                         }
                     }
                 },
-                "next": "13"
+                "next": "15"
             },
-            "13": {
+            "15": {
                 "type": "if",
                 "var": "Opt21",
                 "data": {
                     "start": {
                         "type": "start",
-                        "next": "14"
+                        "next": "16"
                     },
-                    "14": {
+                    "16": {
                         "type": "line",
                         "data": "You choose Opt21.",
                         "next": "end"
@@ -293,17 +714,17 @@ var data = {
                         "type": "end"
                     }
                 },
-                "next": "16"
+                "next": "18"
             },
-            "16": {
+            "18": {
                 "type": "if",
                 "var": "Opt22",
                 "data": {
                     "start": {
                         "type": "start",
-                        "next": "17"
+                        "next": "19"
                     },
-                    "17": {
+                    "19": {
                         "type": "line",
                         "data": "You choose Opt22.",
                         "next": "end"
@@ -324,47 +745,295 @@ var data = {
         "data": {
             "start": {
                 "type": "start",
-                "next": "20"
+                "next": "22"
             },
-            "20": {
-                "type": "line",
-                "data": "11 This is the first line of the first dialogue.",
-                "next": "21"
-            },
-            "21": {
-                "type": "line",
-                "data": "21 This is the second line of the first dialogue.",
-                "next": "23"
-            },
-            "23": {
+            "22": {
                 "type": "call",
                 "data": {
                     "type": "dialogue",
                     "data": {
                         "start": {
                             "type": "start",
-                            "next": "26"
+                            "next": "99"
                         },
-                        "26": {
+                        "99": {
+                            "type": "call",
+                            "data": {
+                                "type": "avatar",
+                                "data": "assets/characters/character1/avatar.png",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "100"
+                        },
+                        "100": {
+                            "type": "call",
+                            "data": {
+                                "type": "name",
+                                "data": "Alice the Rogue",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "end"
+                        },
+                        "end": {
+                            "type": "end"
+                        }
+                    }
+                },
+                "next": "24"
+            },
+            "24": {
+                "type": "line",
+                "data": "Now using Alice",
+                "next": "26"
+            },
+            "26": {
+                "type": "call",
+                "data": {
+                    "type": "dialogue",
+                    "data": {
+                        "start": {
+                            "type": "start",
+                            "next": "103"
+                        },
+                        "103": {
+                            "type": "call",
+                            "data": {
+                                "type": "avatar",
+                                "data": "assets/characters/character1/sad_avatar.png",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "104"
+                        },
+                        "104": {
+                            "type": "call",
+                            "data": {
+                                "type": "name",
+                                "data": "Alice the Rogue",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "end"
+                        },
+                        "end": {
+                            "type": "end"
+                        }
+                    }
+                },
+                "next": "28"
+            },
+            "28": {
+                "type": "line",
+                "data": "Now using SadAlice",
+                "next": "30"
+            },
+            "30": {
+                "type": "call",
+                "data": {
+                    "type": "dialogue",
+                    "data": {
+                        "start": {
+                            "type": "start",
+                            "next": "165"
+                        },
+                        "165": {
+                            "type": "call",
+                            "data": {
+                                "type": "avatar",
+                                "data": "assets/empty.png",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "166"
+                        },
+                        "166": {
+                            "type": "call",
+                            "data": {
+                                "type": "name",
+                                "data": "null",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "end"
+                        },
+                        "end": {
+                            "type": "end"
+                        }
+                    }
+                },
+                "next": "32"
+            },
+            "32": {
+                "type": "line",
+                "data": "11 This is the first line of the first dialogue.",
+                "next": "33"
+            },
+            "33": {
+                "type": "line",
+                "data": "21 This is the second line of the first dialogue.",
+                "next": "35"
+            },
+            "35": {
+                "type": "call",
+                "data": {
+                    "type": "dialogue",
+                    "data": {
+                        "start": {
+                            "type": "start",
+                            "next": "38"
+                        },
+                        "38": {
+                            "type": "call",
+                            "data": {
+                                "type": "dialogue",
+                                "data": {
+                                    "start": {
+                                        "type": "start",
+                                        "next": "121"
+                                    },
+                                    "121": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "avatar",
+                                            "data": "assets/characters/character2/avatar.png",
+                                            "end": {
+                                                "type": "end"
+                                            }
+                                        },
+                                        "next": "122"
+                                    },
+                                    "122": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "name",
+                                            "data": "Bob the Builder",
+                                            "end": {
+                                                "type": "end"
+                                            }
+                                        },
+                                        "next": "end"
+                                    },
+                                    "end": {
+                                        "type": "end"
+                                    }
+                                }
+                            },
+                            "next": "40"
+                        },
+                        "40": {
+                            "type": "line",
+                            "data": "Now using Bob",
+                            "next": "42"
+                        },
+                        "42": {
+                            "type": "call",
+                            "data": {
+                                "type": "dialogue",
+                                "data": {
+                                    "start": {
+                                        "type": "start",
+                                        "next": "125"
+                                    },
+                                    "125": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "avatar",
+                                            "data": "assets/characters/character2/sad_avatar.png",
+                                            "end": {
+                                                "type": "end"
+                                            }
+                                        },
+                                        "next": "126"
+                                    },
+                                    "126": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "name",
+                                            "data": "Bob the Builder",
+                                            "end": {
+                                                "type": "end"
+                                            }
+                                        },
+                                        "next": "end"
+                                    },
+                                    "end": {
+                                        "type": "end"
+                                    }
+                                }
+                            },
+                            "next": "44"
+                        },
+                        "44": {
+                            "type": "line",
+                            "data": "Now using SadBob",
+                            "next": "46"
+                        },
+                        "46": {
+                            "type": "call",
+                            "data": {
+                                "type": "dialogue",
+                                "data": {
+                                    "start": {
+                                        "type": "start",
+                                        "next": "165"
+                                    },
+                                    "165": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "avatar",
+                                            "data": "assets/empty.png",
+                                            "end": {
+                                                "type": "end"
+                                            }
+                                        },
+                                        "next": "166"
+                                    },
+                                    "166": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "name",
+                                            "data": "null",
+                                            "end": {
+                                                "type": "end"
+                                            }
+                                        },
+                                        "next": "end"
+                                    },
+                                    "end": {
+                                        "type": "end"
+                                    }
+                                }
+                            },
+                            "next": "48"
+                        },
+                        "48": {
                             "type": "line",
                             "data": "12 This is the first line of the second dialogue.",
-                            "next": "27"
+                            "next": "49"
                         },
-                        "27": {
+                        "49": {
                             "type": "line",
                             "data": "22 This is the second line of the second dialogue.",
-                            "next": "29"
+                            "next": "51"
                         },
-                        "29": {
+                        "51": {
                             "type": "call",
                             "data": {
                                 "type": "button",
                                 "data": {
                                     "start": {
                                         "type": "start",
-                                        "next": "44"
+                                        "next": "76"
                                     },
-                                    "44": {
+                                    "76": {
                                         "type": "line",
                                         "data": "This is the content of the first button.",
                                         "next": "end"
@@ -374,15 +1043,15 @@ var data = {
                                     }
                                 },
                                 "options": {
-                                    "46": {
+                                    "78": {
                                         "type": "option",
                                         "var": "Opt11",
                                         "data": {
                                             "start": {
                                                 "type": "start",
-                                                "next": "47"
+                                                "next": "79"
                                             },
-                                            "47": {
+                                            "79": {
                                                 "type": "line",
                                                 "data": "11O This is the first option of the first button.",
                                                 "next": "end"
@@ -392,15 +1061,15 @@ var data = {
                                             }
                                         }
                                     },
-                                    "48": {
+                                    "80": {
                                         "type": "option",
                                         "var": "Opt21",
                                         "data": {
                                             "start": {
                                                 "type": "start",
-                                                "next": "49"
+                                                "next": "81"
                                             },
-                                            "49": {
+                                            "81": {
                                                 "type": "line",
                                                 "data": "21O This is the second option of the first button.",
                                                 "next": "end"
@@ -412,17 +1081,17 @@ var data = {
                                     }
                                 }
                             },
-                            "next": "31"
+                            "next": "53"
                         },
-                        "31": {
+                        "53": {
                             "type": "if",
                             "var": "Opt11",
                             "data": {
                                 "start": {
                                     "type": "start",
-                                    "next": "32"
+                                    "next": "54"
                                 },
-                                "32": {
+                                "54": {
                                     "type": "line",
                                     "data": "You choose Opt11.",
                                     "next": "end"
@@ -431,17 +1100,17 @@ var data = {
                                     "type": "end"
                                 }
                             },
-                            "next": "34"
+                            "next": "56"
                         },
-                        "34": {
+                        "56": {
                             "type": "if",
                             "var": "Opt21",
                             "data": {
                                 "start": {
                                     "type": "start",
-                                    "next": "35"
+                                    "next": "57"
                                 },
-                                "35": {
+                                "57": {
                                     "type": "line",
                                     "data": "You choose Opt21.",
                                     "next": "end"
@@ -450,23 +1119,147 @@ var data = {
                                     "type": "end"
                                 }
                             },
-                            "next": "37"
+                            "next": "59"
                         },
-                        "37": {
+                        "59": {
                             "type": "call",
                             "data": {
                                 "type": "dialogue",
                                 "data": {
                                     "start": {
                                         "type": "start",
-                                        "next": "40"
+                                        "next": "62"
                                     },
-                                    "40": {
+                                    "62": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "dialogue",
+                                            "data": {
+                                                "start": {
+                                                    "type": "start",
+                                                    "next": "143"
+                                                },
+                                                "143": {
+                                                    "type": "call",
+                                                    "data": {
+                                                        "type": "avatar",
+                                                        "data": "assets/characters/character3/avatar.png",
+                                                        "end": {
+                                                            "type": "end"
+                                                        }
+                                                    },
+                                                    "next": "144"
+                                                },
+                                                "144": {
+                                                    "type": "call",
+                                                    "data": {
+                                                        "type": "name",
+                                                        "data": "Clyde the Assassin",
+                                                        "end": {
+                                                            "type": "end"
+                                                        }
+                                                    },
+                                                    "next": "end"
+                                                },
+                                                "end": {
+                                                    "type": "end"
+                                                }
+                                            }
+                                        },
+                                        "next": "64"
+                                    },
+                                    "64": {
+                                        "type": "line",
+                                        "data": "Now using Clyde",
+                                        "next": "66"
+                                    },
+                                    "66": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "dialogue",
+                                            "data": {
+                                                "start": {
+                                                    "type": "start",
+                                                    "next": "147"
+                                                },
+                                                "147": {
+                                                    "type": "call",
+                                                    "data": {
+                                                        "type": "avatar",
+                                                        "data": "assets/characters/character3/sad_avatar.png",
+                                                        "end": {
+                                                            "type": "end"
+                                                        }
+                                                    },
+                                                    "next": "148"
+                                                },
+                                                "148": {
+                                                    "type": "call",
+                                                    "data": {
+                                                        "type": "name",
+                                                        "data": "Clyde the Assassin",
+                                                        "end": {
+                                                            "type": "end"
+                                                        }
+                                                    },
+                                                    "next": "end"
+                                                },
+                                                "end": {
+                                                    "type": "end"
+                                                }
+                                            }
+                                        },
+                                        "next": "68"
+                                    },
+                                    "68": {
+                                        "type": "line",
+                                        "data": "Now using SadClyde",
+                                        "next": "70"
+                                    },
+                                    "70": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "dialogue",
+                                            "data": {
+                                                "start": {
+                                                    "type": "start",
+                                                    "next": "165"
+                                                },
+                                                "165": {
+                                                    "type": "call",
+                                                    "data": {
+                                                        "type": "avatar",
+                                                        "data": "assets/empty.png",
+                                                        "end": {
+                                                            "type": "end"
+                                                        }
+                                                    },
+                                                    "next": "166"
+                                                },
+                                                "166": {
+                                                    "type": "call",
+                                                    "data": {
+                                                        "type": "name",
+                                                        "data": "null",
+                                                        "end": {
+                                                            "type": "end"
+                                                        }
+                                                    },
+                                                    "next": "end"
+                                                },
+                                                "end": {
+                                                    "type": "end"
+                                                }
+                                            }
+                                        },
+                                        "next": "72"
+                                    },
+                                    "72": {
                                         "type": "line",
                                         "data": "13 This is the first line of the third dialogue.",
-                                        "next": "41"
+                                        "next": "73"
                                     },
-                                    "41": {
+                                    "73": {
                                         "type": "line",
                                         "data": "23 This is the second line of the third dialogue.",
                                         "next": "end"
@@ -495,28 +1288,152 @@ var data = {
         "data": {
             "start": {
                 "type": "start",
-                "next": "26"
+                "next": "38"
             },
-            "26": {
+            "38": {
+                "type": "call",
+                "data": {
+                    "type": "dialogue",
+                    "data": {
+                        "start": {
+                            "type": "start",
+                            "next": "121"
+                        },
+                        "121": {
+                            "type": "call",
+                            "data": {
+                                "type": "avatar",
+                                "data": "assets/characters/character2/avatar.png",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "122"
+                        },
+                        "122": {
+                            "type": "call",
+                            "data": {
+                                "type": "name",
+                                "data": "Bob the Builder",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "end"
+                        },
+                        "end": {
+                            "type": "end"
+                        }
+                    }
+                },
+                "next": "40"
+            },
+            "40": {
+                "type": "line",
+                "data": "Now using Bob",
+                "next": "42"
+            },
+            "42": {
+                "type": "call",
+                "data": {
+                    "type": "dialogue",
+                    "data": {
+                        "start": {
+                            "type": "start",
+                            "next": "125"
+                        },
+                        "125": {
+                            "type": "call",
+                            "data": {
+                                "type": "avatar",
+                                "data": "assets/characters/character2/sad_avatar.png",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "126"
+                        },
+                        "126": {
+                            "type": "call",
+                            "data": {
+                                "type": "name",
+                                "data": "Bob the Builder",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "end"
+                        },
+                        "end": {
+                            "type": "end"
+                        }
+                    }
+                },
+                "next": "44"
+            },
+            "44": {
+                "type": "line",
+                "data": "Now using SadBob",
+                "next": "46"
+            },
+            "46": {
+                "type": "call",
+                "data": {
+                    "type": "dialogue",
+                    "data": {
+                        "start": {
+                            "type": "start",
+                            "next": "165"
+                        },
+                        "165": {
+                            "type": "call",
+                            "data": {
+                                "type": "avatar",
+                                "data": "assets/empty.png",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "166"
+                        },
+                        "166": {
+                            "type": "call",
+                            "data": {
+                                "type": "name",
+                                "data": "null",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "end"
+                        },
+                        "end": {
+                            "type": "end"
+                        }
+                    }
+                },
+                "next": "48"
+            },
+            "48": {
                 "type": "line",
                 "data": "12 This is the first line of the second dialogue.",
-                "next": "27"
+                "next": "49"
             },
-            "27": {
+            "49": {
                 "type": "line",
                 "data": "22 This is the second line of the second dialogue.",
-                "next": "29"
+                "next": "51"
             },
-            "29": {
+            "51": {
                 "type": "call",
                 "data": {
                     "type": "button",
                     "data": {
                         "start": {
                             "type": "start",
-                            "next": "44"
+                            "next": "76"
                         },
-                        "44": {
+                        "76": {
                             "type": "line",
                             "data": "This is the content of the first button.",
                             "next": "end"
@@ -526,15 +1443,15 @@ var data = {
                         }
                     },
                     "options": {
-                        "46": {
+                        "78": {
                             "type": "option",
                             "var": "Opt11",
                             "data": {
                                 "start": {
                                     "type": "start",
-                                    "next": "47"
+                                    "next": "79"
                                 },
-                                "47": {
+                                "79": {
                                     "type": "line",
                                     "data": "11O This is the first option of the first button.",
                                     "next": "end"
@@ -544,15 +1461,15 @@ var data = {
                                 }
                             }
                         },
-                        "48": {
+                        "80": {
                             "type": "option",
                             "var": "Opt21",
                             "data": {
                                 "start": {
                                     "type": "start",
-                                    "next": "49"
+                                    "next": "81"
                                 },
-                                "49": {
+                                "81": {
                                     "type": "line",
                                     "data": "21O This is the second option of the first button.",
                                     "next": "end"
@@ -564,17 +1481,17 @@ var data = {
                         }
                     }
                 },
-                "next": "31"
+                "next": "53"
             },
-            "31": {
+            "53": {
                 "type": "if",
                 "var": "Opt11",
                 "data": {
                     "start": {
                         "type": "start",
-                        "next": "32"
+                        "next": "54"
                     },
-                    "32": {
+                    "54": {
                         "type": "line",
                         "data": "You choose Opt11.",
                         "next": "end"
@@ -583,17 +1500,17 @@ var data = {
                         "type": "end"
                     }
                 },
-                "next": "34"
+                "next": "56"
             },
-            "34": {
+            "56": {
                 "type": "if",
                 "var": "Opt21",
                 "data": {
                     "start": {
                         "type": "start",
-                        "next": "35"
+                        "next": "57"
                     },
-                    "35": {
+                    "57": {
                         "type": "line",
                         "data": "You choose Opt21.",
                         "next": "end"
@@ -602,23 +1519,147 @@ var data = {
                         "type": "end"
                     }
                 },
-                "next": "37"
+                "next": "59"
             },
-            "37": {
+            "59": {
                 "type": "call",
                 "data": {
                     "type": "dialogue",
                     "data": {
                         "start": {
                             "type": "start",
-                            "next": "40"
+                            "next": "62"
                         },
-                        "40": {
+                        "62": {
+                            "type": "call",
+                            "data": {
+                                "type": "dialogue",
+                                "data": {
+                                    "start": {
+                                        "type": "start",
+                                        "next": "143"
+                                    },
+                                    "143": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "avatar",
+                                            "data": "assets/characters/character3/avatar.png",
+                                            "end": {
+                                                "type": "end"
+                                            }
+                                        },
+                                        "next": "144"
+                                    },
+                                    "144": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "name",
+                                            "data": "Clyde the Assassin",
+                                            "end": {
+                                                "type": "end"
+                                            }
+                                        },
+                                        "next": "end"
+                                    },
+                                    "end": {
+                                        "type": "end"
+                                    }
+                                }
+                            },
+                            "next": "64"
+                        },
+                        "64": {
+                            "type": "line",
+                            "data": "Now using Clyde",
+                            "next": "66"
+                        },
+                        "66": {
+                            "type": "call",
+                            "data": {
+                                "type": "dialogue",
+                                "data": {
+                                    "start": {
+                                        "type": "start",
+                                        "next": "147"
+                                    },
+                                    "147": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "avatar",
+                                            "data": "assets/characters/character3/sad_avatar.png",
+                                            "end": {
+                                                "type": "end"
+                                            }
+                                        },
+                                        "next": "148"
+                                    },
+                                    "148": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "name",
+                                            "data": "Clyde the Assassin",
+                                            "end": {
+                                                "type": "end"
+                                            }
+                                        },
+                                        "next": "end"
+                                    },
+                                    "end": {
+                                        "type": "end"
+                                    }
+                                }
+                            },
+                            "next": "68"
+                        },
+                        "68": {
+                            "type": "line",
+                            "data": "Now using SadClyde",
+                            "next": "70"
+                        },
+                        "70": {
+                            "type": "call",
+                            "data": {
+                                "type": "dialogue",
+                                "data": {
+                                    "start": {
+                                        "type": "start",
+                                        "next": "165"
+                                    },
+                                    "165": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "avatar",
+                                            "data": "assets/empty.png",
+                                            "end": {
+                                                "type": "end"
+                                            }
+                                        },
+                                        "next": "166"
+                                    },
+                                    "166": {
+                                        "type": "call",
+                                        "data": {
+                                            "type": "name",
+                                            "data": "null",
+                                            "end": {
+                                                "type": "end"
+                                            }
+                                        },
+                                        "next": "end"
+                                    },
+                                    "end": {
+                                        "type": "end"
+                                    }
+                                }
+                            },
+                            "next": "72"
+                        },
+                        "72": {
                             "type": "line",
                             "data": "13 This is the first line of the third dialogue.",
-                            "next": "41"
+                            "next": "73"
                         },
-                        "41": {
+                        "73": {
                             "type": "line",
                             "data": "23 This is the second line of the third dialogue.",
                             "next": "end"
@@ -640,14 +1681,138 @@ var data = {
         "data": {
             "start": {
                 "type": "start",
-                "next": "40"
+                "next": "62"
             },
-            "40": {
+            "62": {
+                "type": "call",
+                "data": {
+                    "type": "dialogue",
+                    "data": {
+                        "start": {
+                            "type": "start",
+                            "next": "143"
+                        },
+                        "143": {
+                            "type": "call",
+                            "data": {
+                                "type": "avatar",
+                                "data": "assets/characters/character3/avatar.png",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "144"
+                        },
+                        "144": {
+                            "type": "call",
+                            "data": {
+                                "type": "name",
+                                "data": "Clyde the Assassin",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "end"
+                        },
+                        "end": {
+                            "type": "end"
+                        }
+                    }
+                },
+                "next": "64"
+            },
+            "64": {
+                "type": "line",
+                "data": "Now using Clyde",
+                "next": "66"
+            },
+            "66": {
+                "type": "call",
+                "data": {
+                    "type": "dialogue",
+                    "data": {
+                        "start": {
+                            "type": "start",
+                            "next": "147"
+                        },
+                        "147": {
+                            "type": "call",
+                            "data": {
+                                "type": "avatar",
+                                "data": "assets/characters/character3/sad_avatar.png",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "148"
+                        },
+                        "148": {
+                            "type": "call",
+                            "data": {
+                                "type": "name",
+                                "data": "Clyde the Assassin",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "end"
+                        },
+                        "end": {
+                            "type": "end"
+                        }
+                    }
+                },
+                "next": "68"
+            },
+            "68": {
+                "type": "line",
+                "data": "Now using SadClyde",
+                "next": "70"
+            },
+            "70": {
+                "type": "call",
+                "data": {
+                    "type": "dialogue",
+                    "data": {
+                        "start": {
+                            "type": "start",
+                            "next": "165"
+                        },
+                        "165": {
+                            "type": "call",
+                            "data": {
+                                "type": "avatar",
+                                "data": "assets/empty.png",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "166"
+                        },
+                        "166": {
+                            "type": "call",
+                            "data": {
+                                "type": "name",
+                                "data": "null",
+                                "end": {
+                                    "type": "end"
+                                }
+                            },
+                            "next": "end"
+                        },
+                        "end": {
+                            "type": "end"
+                        }
+                    }
+                },
+                "next": "72"
+            },
+            "72": {
                 "type": "line",
                 "data": "13 This is the first line of the third dialogue.",
-                "next": "41"
+                "next": "73"
             },
-            "41": {
+            "73": {
                 "type": "line",
                 "data": "23 This is the second line of the third dialogue.",
                 "next": "end"
@@ -662,9 +1827,9 @@ var data = {
         "data": {
             "start": {
                 "type": "start",
-                "next": "44"
+                "next": "76"
             },
-            "44": {
+            "76": {
                 "type": "line",
                 "data": "This is the content of the first button.",
                 "next": "end"
@@ -674,15 +1839,15 @@ var data = {
             }
         },
         "options": {
-            "46": {
+            "78": {
                 "type": "option",
                 "var": "Opt11",
                 "data": {
                     "start": {
                         "type": "start",
-                        "next": "47"
+                        "next": "79"
                     },
-                    "47": {
+                    "79": {
                         "type": "line",
                         "data": "11O This is the first option of the first button.",
                         "next": "end"
@@ -692,15 +1857,15 @@ var data = {
                     }
                 }
             },
-            "48": {
+            "80": {
                 "type": "option",
                 "var": "Opt21",
                 "data": {
                     "start": {
                         "type": "start",
-                        "next": "49"
+                        "next": "81"
                     },
-                    "49": {
+                    "81": {
                         "type": "line",
                         "data": "21O This is the second option of the first button.",
                         "next": "end"
@@ -717,9 +1882,9 @@ var data = {
         "data": {
             "start": {
                 "type": "start",
-                "next": "52"
+                "next": "84"
             },
-            "52": {
+            "84": {
                 "type": "line",
                 "data": "This is the content of the second button.",
                 "next": "end"
@@ -729,15 +1894,15 @@ var data = {
             }
         },
         "options": {
-            "54": {
+            "86": {
                 "type": "option",
                 "var": "Opt12",
                 "data": {
                     "start": {
                         "type": "start",
-                        "next": "55"
+                        "next": "87"
                     },
-                    "55": {
+                    "87": {
                         "type": "line",
                         "data": "12O This is the first option of the second button.",
                         "next": "end"
@@ -747,15 +1912,15 @@ var data = {
                     }
                 }
             },
-            "56": {
+            "88": {
                 "type": "option",
                 "var": "Opt22",
                 "data": {
                     "start": {
                         "type": "start",
-                        "next": "57"
+                        "next": "89"
                     },
-                    "57": {
+                    "89": {
                         "type": "line",
                         "data": "22O This is the second option of the second button.",
                         "next": "end"
@@ -772,14 +1937,25 @@ var data = {
         "data": {
             "start": {
                 "type": "start",
-                "next": "60"
+                "next": "92"
             },
-            "60": {
+            "92": {
+                "type": "call",
+                "data": {
+                    "type": "avatar",
+                    "data": "assets/empty.png",
+                    "end": {
+                        "type": "end"
+                    }
+                },
+                "next": "93"
+            },
+            "93": {
                 "type": "line",
                 "data": "14 This is the first line of the third dialogue.",
-                "next": "61"
+                "next": "94"
             },
-            "61": {
+            "94": {
                 "type": "line",
                 "data": "24 This is the second line of the third dialogue.",
                 "next": "end"
@@ -789,14 +1965,329 @@ var data = {
             }
         }
     },
+    "Alice": {
+        "type": "dialogue",
+        "data": {
+            "start": {
+                "type": "start",
+                "next": "99"
+            },
+            "99": {
+                "type": "call",
+                "data": {
+                    "type": "avatar",
+                    "data": "assets/characters/character1/avatar.png",
+                    "end": {
+                        "type": "end"
+                    }
+                },
+                "next": "100"
+            },
+            "100": {
+                "type": "call",
+                "data": {
+                    "type": "name",
+                    "data": "Alice the Rogue",
+                    "end": {
+                        "type": "end"
+                    }
+                },
+                "next": "end"
+            },
+            "end": {
+                "type": "end"
+            }
+        }
+    },
+    "SadAlice": {
+        "type": "dialogue",
+        "data": {
+            "start": {
+                "type": "start",
+                "next": "103"
+            },
+            "103": {
+                "type": "call",
+                "data": {
+                    "type": "avatar",
+                    "data": "assets/characters/character1/sad_avatar.png",
+                    "end": {
+                        "type": "end"
+                    }
+                },
+                "next": "104"
+            },
+            "104": {
+                "type": "call",
+                "data": {
+                    "type": "name",
+                    "data": "Alice the Rogue",
+                    "end": {
+                        "type": "end"
+                    }
+                },
+                "next": "end"
+            },
+            "end": {
+                "type": "end"
+            }
+        }
+    },
+    "AliceAvatar": {
+        "type": "avatar",
+        "data": "assets/characters/character1/avatar.png",
+        "end": {
+            "type": "end"
+        }
+    },
+    "AliceAvatarSad": {
+        "type": "avatar",
+        "data": "assets/characters/character1/sad_avatar.png",
+        "end": {
+            "type": "end"
+        }
+    },
+    "AliceName": {
+        "type": "name",
+        "data": "Alice the Rogue",
+        "end": {
+            "type": "end"
+        }
+    },
+    "Bob": {
+        "type": "dialogue",
+        "data": {
+            "start": {
+                "type": "start",
+                "next": "121"
+            },
+            "121": {
+                "type": "call",
+                "data": {
+                    "type": "avatar",
+                    "data": "assets/characters/character2/avatar.png",
+                    "end": {
+                        "type": "end"
+                    }
+                },
+                "next": "122"
+            },
+            "122": {
+                "type": "call",
+                "data": {
+                    "type": "name",
+                    "data": "Bob the Builder",
+                    "end": {
+                        "type": "end"
+                    }
+                },
+                "next": "end"
+            },
+            "end": {
+                "type": "end"
+            }
+        }
+    },
+    "SadBob": {
+        "type": "dialogue",
+        "data": {
+            "start": {
+                "type": "start",
+                "next": "125"
+            },
+            "125": {
+                "type": "call",
+                "data": {
+                    "type": "avatar",
+                    "data": "assets/characters/character2/sad_avatar.png",
+                    "end": {
+                        "type": "end"
+                    }
+                },
+                "next": "126"
+            },
+            "126": {
+                "type": "call",
+                "data": {
+                    "type": "name",
+                    "data": "Bob the Builder",
+                    "end": {
+                        "type": "end"
+                    }
+                },
+                "next": "end"
+            },
+            "end": {
+                "type": "end"
+            }
+        }
+    },
+    "BobAvatar": {
+        "type": "avatar",
+        "data": "assets/characters/character2/avatar.png",
+        "end": {
+            "type": "end"
+        }
+    },
+    "BobAvatarSad": {
+        "type": "avatar",
+        "data": "assets/characters/character2/sad_avatar.png",
+        "end": {
+            "type": "end"
+        }
+    },
+    "BobName": {
+        "type": "name",
+        "data": "Bob the Builder",
+        "end": {
+            "type": "end"
+        }
+    },
+    "Clyde": {
+        "type": "dialogue",
+        "data": {
+            "start": {
+                "type": "start",
+                "next": "143"
+            },
+            "143": {
+                "type": "call",
+                "data": {
+                    "type": "avatar",
+                    "data": "assets/characters/character3/avatar.png",
+                    "end": {
+                        "type": "end"
+                    }
+                },
+                "next": "144"
+            },
+            "144": {
+                "type": "call",
+                "data": {
+                    "type": "name",
+                    "data": "Clyde the Assassin",
+                    "end": {
+                        "type": "end"
+                    }
+                },
+                "next": "end"
+            },
+            "end": {
+                "type": "end"
+            }
+        }
+    },
+    "SadClyde": {
+        "type": "dialogue",
+        "data": {
+            "start": {
+                "type": "start",
+                "next": "147"
+            },
+            "147": {
+                "type": "call",
+                "data": {
+                    "type": "avatar",
+                    "data": "assets/characters/character3/sad_avatar.png",
+                    "end": {
+                        "type": "end"
+                    }
+                },
+                "next": "148"
+            },
+            "148": {
+                "type": "call",
+                "data": {
+                    "type": "name",
+                    "data": "Clyde the Assassin",
+                    "end": {
+                        "type": "end"
+                    }
+                },
+                "next": "end"
+            },
+            "end": {
+                "type": "end"
+            }
+        }
+    },
+    "ClydeAvatar": {
+        "type": "avatar",
+        "data": "assets/characters/character3/avatar.png",
+        "end": {
+            "type": "end"
+        }
+    },
+    "ClydeAvatarSad": {
+        "type": "avatar",
+        "data": "assets/characters/character3/sad_avatar.png",
+        "end": {
+            "type": "end"
+        }
+    },
+    "ClydeName": {
+        "type": "name",
+        "data": "Clyde the Assassin",
+        "end": {
+            "type": "end"
+        }
+    },
+    "Empty": {
+        "type": "dialogue",
+        "data": {
+            "start": {
+                "type": "start",
+                "next": "165"
+            },
+            "165": {
+                "type": "call",
+                "data": {
+                    "type": "avatar",
+                    "data": "assets/empty.png",
+                    "end": {
+                        "type": "end"
+                    }
+                },
+                "next": "166"
+            },
+            "166": {
+                "type": "call",
+                "data": {
+                    "type": "name",
+                    "data": "null",
+                    "end": {
+                        "type": "end"
+                    }
+                },
+                "next": "end"
+            },
+            "end": {
+                "type": "end"
+            }
+        }
+    },
+    "EmptyAvatar": {
+        "type": "avatar",
+        "data": "assets/empty.png",
+        "end": {
+            "type": "end"
+        }
+    },
+    "EmptyName": {
+        "type": "name",
+        "data": "null",
+        "end": {
+            "type": "end"
+        }
+    },
     "End": {
         "type": "dialogue",
         "data": {
             "start": {
                 "type": "start",
-                "next": "64"
+                "next": "178"
             },
-            "64": {
+            "178": {
                 "type": "line",
                 "data": "end",
                 "next": "end"

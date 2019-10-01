@@ -6,7 +6,6 @@
 [node name="Dialogue Manager" type="Node2D"]
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_group_": true,
 "_edit_lock_": true
 }
 
@@ -40,6 +39,23 @@ margin_right = 1006.0
 margin_bottom = 580.0
 alignment = 1
 
-[node name="Avatar" type="Sprite" parent="."]
-position = Vector2( 40, 390 )
+[node name="AvatarBox" type="Polygon2D" parent="."]
+color = Color( 0.305882, 0.203922, 0.203922, 1 )
+polygon = PoolVector2Array( 10, 410, 130, 410, 130, 290, 10, 290, 10, 410 )
+
+[node name="Avatar" type="Sprite" parent="AvatarBox"]
+position = Vector2( 70, 350 )
+scale = Vector2( 1.5625, 1.5625 )
 texture = ExtResource( 2 )
+
+[node name="NameBox" type="Polygon2D" parent="."]
+position = Vector2( 60, 0 )
+color = Color( 0.180392, 0.145098, 0.145098, 1 )
+polygon = PoolVector2Array( 80, 380, 80, 410, 250, 410, 250, 380, 160, 380 )
+
+[node name="Name" type="RichTextLabel" parent="NameBox"]
+margin_left = 90.0
+margin_top = 390.0
+margin_right = 240.0
+margin_bottom = 404.0
+scroll_active = false

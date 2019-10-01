@@ -60,8 +60,40 @@ func clear_buttons () -> void:
 	for child in get_node("DialogueBox/OptionBox").get_children():
 		get_node("DialogueBox/OptionBox").remove_child(child)
 
+
 func change_avatar (image_path):
-	$Avatar.set_texture(load("res://" + image_path))
+	$AvatarBox/Avatar.set_texture(load("res://" + image_path))
+	
+	if load("res://" + image_path):
+		show_avatar()
+	else:
+		hide_avatar()
+
+
+func show_avatar () -> void:
+	$AvatarBox.show()
+
+
+func hide_avatar () -> void:
+	$AvatarBox.hide()
+
+
+func change_name (name : String) -> void:
+	$NameBox/Name.set_text(name)
+	
+	if name and name != "null":
+		show_name()
+	else:
+		hide_name()
+
+
+func show_name () -> void:
+	$NameBox.show()
+
+
+func hide_name () -> void:
+	$NameBox.hide()
+
 
 func on_text_change (text) -> void:
 	get_node("DialogueBox/Text").text = text
@@ -82,10 +114,11 @@ func _ready ():
 	dialogue.connect("hided_buttons", self, "hide_buttons")
 	dialogue.connect("cleared_buttons", self, "clear_buttons")
 	dialogue.connect("changed_avatar", self, "change_avatar")
+	dialogue.connect("changed_name", self, "change_name")
 	dialogue.connect("text_changed", self, "on_text_change")
 	dialogue.connect("dialogue_finished", self, "on_dialogue_finished")
 	
-	load_dialogue("res://dialogues/output.gd")
+	load_dialogue("res://dialogues/example_dialogue.gd")
 
 
 func _process(delta):

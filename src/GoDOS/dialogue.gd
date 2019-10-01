@@ -11,7 +11,8 @@ signal showed_buttons
 signal hided_buttons
 signal cleared_buttons
 signal changed_avatar (image_path)
-signal text_changed(text)
+signal changed_name (name)
+signal text_changed (text)
 signal dialogue_finished
 
 
@@ -28,8 +29,14 @@ func hide_buttons () -> void:
 func clear_buttons () -> void:
 	emit_signal("cleared_buttons")
 
+
 func change_avatar (image_path) -> void:
 	emit_signal("changed_avatar", image_path)
+
+
+func change_name (name) -> void:
+	emit_signal("changed_name", name)
+
 
 func start_element() -> void:
 	assert(get_current_element().has("type"))
@@ -53,6 +60,10 @@ func start_element() -> void:
 		
 		"avatar":
 			change_avatar(get_current_element()["data"])
+			state.push("end")
+		
+		"name":
+			change_name(get_current_element()["data"])
 			state.push("end")
 
 		"if":
