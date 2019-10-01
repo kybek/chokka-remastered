@@ -118,7 +118,7 @@ func _ready ():
 	dialogue.connect("text_changed", self, "on_text_change")
 	dialogue.connect("dialogue_finished", self, "on_dialogue_finished")
 	
-	load_dialogue("res://dialogues/example_dialogue.gd")
+#	load_dialogue("res://dialogues/example_dialogue.gd")
 
 
 func _process(delta):

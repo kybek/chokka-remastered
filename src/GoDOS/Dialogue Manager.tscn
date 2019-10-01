@@ -10,6 +10,7 @@ __meta__ = {
 }
 
 [node name="DialogueBox" type="Polygon2D" parent="."]
+visible = false
 color = Color( 0.231373, 0.164706, 0.164706, 1 )
 polygon = PoolVector2Array( 10, 590, 1014, 590, 1014, 420, 10, 420 )
 __meta__ = {
@@ -40,6 +41,7 @@ margin_bottom = 580.0
 alignment = 1
 
 [node name="AvatarBox" type="Polygon2D" parent="."]
+visible = false
 color = Color( 0.305882, 0.203922, 0.203922, 1 )
 polygon = PoolVector2Array( 10, 410, 130, 410, 130, 290, 10, 290, 10, 410 )
 
@@ -49,6 +51,7 @@ scale = Vector2( 1.5625, 1.5625 )
 texture = ExtResource( 2 )
 
 [node name="NameBox" type="Polygon2D" parent="."]
+visible = false
 position = Vector2( 60, 0 )
 color = Color( 0.180392, 0.145098, 0.145098, 1 )
 polygon = PoolVector2Array( 80, 380, 80, 410, 250, 410, 250, 380, 160, 380 )
