@@ -6,8 +6,20 @@ signal clicked_on
 
 
 var item
+var count := -1
 var is_highlighted := false setget set_highlight, get_highlight
-var no : int
+
+
+func get_count () -> int:
+	return item.get_count()
+
+
+func add_item (item) -> void:
+	if not item:
+		return
+	
+	self.item = item
+	mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 
 
 func set_highlight (highlight_mode : bool) -> void:

@@ -3,7 +3,6 @@ extends Node
 class_name SeedBag
 
 var _seed : Seed = null setget set_seed, get_seed
-var seed_count : int = 0
 
 export var icon : Texture
 
@@ -15,17 +14,8 @@ func get_seed () -> Seed:
 	return _seed
 
 
-func set_seed_count (new_seed_count : int) -> void:
-	seed_count = new_seed_count
-
-
-func get_seed_count () -> int:
-	return seed_count
-
-
-func _init (_seed : Seed, seed_count : int):
+func _init (_seed : Seed):
 	self._seed = _seed
-	set_seed_count(seed_count)
 	_ready()
 
 func _ready ():
