@@ -2,12 +2,15 @@ extends Node2D
 
 var dialogue : Dialogue
 
+var dialogue_is_active := false
+
 
 func load_dialogue (file_path) -> void:
 	dialogue._reset()
 	dialogue.data = load(file_path).new().data
 	$DialogueBox.show()
 	dialogue.start()
+	dialogue_is_active = true
 
 
 func set_var (key : String, value : bool) -> void:
@@ -103,6 +106,11 @@ func on_text_change (text) -> void:
 func on_dialogue_finished () -> void:
 	$DialogueBox.hide()
 	dialogue._reset()
+	dialogue_is_active = false
+
+
+func is_dialogue_active () -> bool:
+	return dialogue_is_active
 
 
 func _ready ():

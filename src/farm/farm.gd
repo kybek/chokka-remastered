@@ -5,4 +5,5 @@ func _ready():
 	pass
 
 func _process(delta):
-	$Player.move(Vector2(1, 1))
+#	$Player.move(Vector2(1, 1))
+	pass

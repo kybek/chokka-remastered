@@ -1,13 +1,33 @@
 extends Node2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+func move_up () -> void:
+	$Player.move(Vector2(0, -1))
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func move_down () -> void:
+	$Player.move(Vector2(0, 1))
+
+
+func move_left () -> void:
+	$Player.move(Vector2(-1, 0))
+
+
+func move_right () -> void:
+	$Player.move(Vector2(1, 0))
+
+
+var action_key_array = [
+	["move_up", funcref(self, "move_up")],
+	["move_down", funcref(self, "move_down")],
+	["move_left", funcref(self, "move_left")],
+	["move_right", funcref(self, "move_right")]
+]
+
+
+func _process (delta):
+	for action_pair in action_key_array:
+		var action_name : String = action_pair[0]
+		var action_func = action_pair[1]
+		
+		if Input.is_action_pressed(action_name):
+			action_func.call_func()
