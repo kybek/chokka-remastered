@@ -6,6 +6,7 @@ signal clicked_on
 
 
 var item
+var no : int
 var count := -1
 var is_highlighted := false setget set_highlight, get_highlight
 
@@ -20,6 +21,13 @@ func add_item (item) -> void:
 	
 	self.item = item
 	mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+
+
+func remove_item ():
+	var temp = item
+	self.item = null
+	mouse_default_cursor_shape = Control.CURSOR_ARROW
+	return temp
 
 
 func set_highlight (highlight_mode : bool) -> void:
@@ -39,10 +47,19 @@ func toggle_highlight () -> void:
 	set_highlight(!get_highlight())
 
 
+var input_is_enabled = true
+
+
+func set_input_mode (input_mode : bool) -> void:
+	input_is_enabled = input_mode
+
+
 func _gui_input (event):
-	if event is InputEventMouseButton and event.is_pressed():
-		emit_signal("clicked_on")
+	if input_is_enabled:
+		if event is InputEventMouseButton and event.is_pressed():
+			emit_signal("clicked_on")
 
 
 func _ready ():
+	add_to_group("Input")
 	print('alive')

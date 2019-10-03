@@ -44,4 +44,5 @@ func _ready ():
 
 func _process (delta):
 	if Input.is_action_just_pressed("next_line"):
-		add_item_to_slot(get_current_slot(), [1, 2, 3, 4, 5])
+#		add_item_to_slot(get_current_slot(), [1, 2, 3, 4, 5])
+		pass

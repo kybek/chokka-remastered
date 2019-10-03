@@ -17,17 +17,17 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "Flower",
 "language": "GDScript",
-"path": "res://src/biology/Flower.gd"
+"path": "res://src/biology/flower.gd"
 }, {
 "base": "Node",
 "class": "Genes",
 "language": "GDScript",
-"path": "res://src/biology/Genes.gd"
+"path": "res://src/biology/genes.gd"
 }, {
 "base": "Node2D",
 "class": "Seed",
 "language": "GDScript",
-"path": "res://src/biology/Seed.gd"
+"path": "res://src/biology/seed.gd"
 }, {
 "base": "Node",
 "class": "SeedBag",
@@ -57,7 +57,6 @@ _global_script_class_icons={
 [application]
 
 config/name="Chokka Remastered"
-run/main_scene="res://src/farm/Farm.tscn"
 config/icon="res://icon.png"
 
 [input]
@@ -90,6 +89,11 @@ move_left={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777231,"unicode":0,"echo":false,"script":null)
+ ]
+}
+use_item={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
 
