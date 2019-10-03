@@ -1,19 +1,26 @@
-extends Node2D
+extends YSort
+
+var player : KinematicBody2D = null
+
 
 func move_up () -> void:
-	$Player.move(Vector2(0, -1))
+	assert(player)
+	player.move(Vector2(0, -1))
 
 
 func move_down () -> void:
-	$Player.move(Vector2(0, 1))
+	assert(player)
+	player.move(Vector2(0, 1))
 
 
 func move_left () -> void:
-	$Player.move(Vector2(-1, 0))
+	assert(player)
+	player.move(Vector2(-1, 0))
 
 
 func move_right () -> void:
-	$Player.move(Vector2(1, 0))
+	assert(player)
+	player.move(Vector2(1, 0))
 
 
 var action_key_array = [
@@ -40,6 +47,19 @@ func process_input () -> void:
 			action_func.call_func()
 
 
+func kill_flower (flower_name : String):
+	get_node(flower_name).queue_free()
+
+
+func add_object (object) -> void:
+	add_child(object)
+
+
+func add_flower (flower : Flower) -> void:
+	add_object(flower)
+	flower.connect("kill", self, "kill_flower")
+
+
 func _process (delta):
 	if input_is_enabled:
 		process_input()
@@ -47,3 +67,6 @@ func _process (delta):
 
 func _ready ():
 	add_to_group("Input")
+	
+	if get_node("Player"):
+		player = get_node("Player")
