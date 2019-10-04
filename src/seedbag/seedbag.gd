@@ -18,6 +18,7 @@ func _init (_seed : Seed):
 	self._seed = _seed
 	_ready()
 
+
 func _ready ():
 	assert(icon)
 	var sprite = Sprite.new()

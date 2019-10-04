@@ -15,17 +15,22 @@ func get_count () -> int:
 	return item.get_count()
 
 
-func add_item (item) -> void:
+func add_item (item, count : int) -> void:
 	if not item:
 		return
 	
+	if not count:
+		return
+	
 	self.item = item
+	self.count = count
 	mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 
 
-func remove_item ():
-	var temp = item
+func remove_item () -> Array:
+	var temp = [item, count]
 	self.item = null
+	self.count = 0
 	mouse_default_cursor_shape = Control.CURSOR_ARROW
 	return temp
 

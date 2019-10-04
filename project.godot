@@ -57,7 +57,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Chokka Remastered"
-run/main_scene="res://src/farm/Farm.tscn"
+run/main_scene="res://src/farm/farm.tscn"
 config/icon="res://icon.png"
 
 [input]
