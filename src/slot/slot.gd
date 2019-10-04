@@ -15,20 +15,25 @@ func get_count () -> int:
 	return item.get_count()
 
 
-func add_item (item, count : int) -> void:
-	if not item:
+func add_item (dictionary : Dictionary) -> void:
+	if not dictionary.has("item"):
 		return
 	
-	if not count:
+	if not dictionary.has("count"):
 		return
 	
-	self.item = item
-	self.count = count
+	self.item = dictionary["item"]
+	self.count = dictionary["count"]
 	mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	set_texture(self.item.icon)
 
 
-func remove_item () -> Array:
-	var temp = [item, count]
+func remove_item () -> Dictionary:
+	var temp = {
+		"item" : item,
+		"count" : count
+	}
+	
 	self.item = null
 	self.count = 0
 	mouse_default_cursor_shape = Control.CURSOR_ARROW

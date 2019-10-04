@@ -38,6 +38,12 @@ func set_seed_count (new_seed_count : int) -> void:
 func get_seed_count () -> int:
    return seed_count
 
+func _init (dictionary : Dictionary):
+	set_color(dictionary["color"])
+	set_size(dictionary["size"])
+	set_polen_count(dictionary["polen_count"])
+	set_seed_count(dictionary["seed_count"])
+
 
 func _ready ():
    name = "Genes"

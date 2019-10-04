@@ -2,7 +2,11 @@ extends Node
 
 class_name Seed
 
-var genes : Genes = Genes.new()
+var genes : Genes = null
+
+
+func _init (dictionary : Dictionary):
+	genes = Genes.new(dictionary["genes"])
 
 
 func _ready ():

@@ -23,11 +23,18 @@ func move_right () -> void:
 	player.move(Vector2(1, 0))
 
 
+func use_item () -> void:
+	emit_signal("use_item")
+
+signal use_item
+
+
 var action_key_array = [
 	["move_up", funcref(self, "move_up")],
 	["move_down", funcref(self, "move_down")],
 	["move_left", funcref(self, "move_left")],
-	["move_right", funcref(self, "move_right")]
+	["move_right", funcref(self, "move_right")],
+	["use_item", funcref(self, "use_item")]
 ]
 
 
