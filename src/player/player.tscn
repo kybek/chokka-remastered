@@ -1,17 +1,33 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/player/player.gd" type="Script" id=1]
-[ext_resource path="res://assets/player/player_idle.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://assets/characters/capo/frames/idlefront.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://assets/characters/capo/frames/idleback.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://assets/characters/capo/frames/walkfront.tres" type="SpriteFrames" id=4]
+[ext_resource path="res://assets/characters/capo/frames/walkback.tres" type="SpriteFrames" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 12 )
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
+idle_front = ExtResource( 2 )
+idle_back = ExtResource( 3 )
+walk_front = ExtResource( 4 )
+walk_back = ExtResource( 5 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="Sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
 frames = ExtResource( 2 )
+frame = 2
+speed_scale = 1.75
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 21.047 )
 shape = SubResource( 1 )
+
+[node name="IdleTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+[connection signal="timeout" from="IdleTimer" to="." method="_on_IdleTimer_timeout"]
