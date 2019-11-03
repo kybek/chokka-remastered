@@ -24,10 +24,12 @@ func _ready():
 	var seedbag1 = SeedBag.new(seedbag_dictionary["type1"])
 	var seedbag2 = SeedBag.new(seedbag_dictionary["type2"])
 	var hoe = Tool.new(tool_dictionary["hoe"])
+	var grass_planter = Tool.new(tool_dictionary["grass_planter"])
 	
 	toolbar.add_item_to_slot(0, {"item" : seedbag1, "count" : 1})
 	toolbar.add_item_to_slot(1, {"item" : seedbag2, "count" : 1})
 	toolbar.add_item_to_slot(2, {"item" : hoe, "count" : 1})
+	toolbar.add_item_to_slot(3, {"item" : grass_planter, "count" : 1})
 	
 	inventory.add_item_to_slot(4, {"item" : seedbag1, "count" : 1})
 	inventory.add_item_to_slot(8, {"item" : seedbag2, "count" : 1})

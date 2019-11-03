@@ -139,6 +139,14 @@ func change_tile (tags_array : Array, position : Vector2) -> void:
 
 
 func use_item (item : Node, position : Vector2) -> void:
+	if not item:
+		push_error("ITEM IS NULL")
+		return
+	
+	if not item.effect:
+		push_error("ITEM HAS NO EFFECT!")
+		return
+	
 	if item.effect.type == "change_tile":
 		var tiles = query_tile(item.effect.target.tags, position, item.effect.target.range)
 		for tile in tiles:

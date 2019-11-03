@@ -14,5 +14,22 @@ var data = {
 				"tags" : [["dirt"]]
 			}
 		}
+	},
+	# Remove it later. For debug purposes only.
+	"grass_planter" : {
+		"name" : "Grass Planter",
+		"icon" : load("res://icon.png"),
+		"effect" : {
+			"type" : "change_tile",
+			"target" : {
+				"type" : "cell",
+				"tags" : [["dirt"]],
+				"range" : Vector2(1, 1)
+			},
+			"final" : {
+				"type" : "tags",
+				"tags" : [["grass"]]
+			}
+		}
 	}
 }
