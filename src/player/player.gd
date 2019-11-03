@@ -75,3 +75,15 @@ var action_key_array = [
 	["move_right", funcref(self, "move_right")],
 	["use_item", funcref(self, "use_item")]
 ]
+
+var inventory = null
+var toolbar = null
+
+func _ready ():
+	assert(get_node("HUD"))
+	inventory = get_node("HUD/InventoryContainer/Inventory")
+	toolbar = get_node("HUD/InventoryContainer/Toolbar")
+
+
+func get_current_item () -> Dictionary:
+	return toolbar.get_current_item()

@@ -2,7 +2,6 @@ extends YSort
 
 var player : KinematicBody2D = null
 
-
 func move_up () -> void:
 	assert(player)
 	player.move(Vector2(0, -1))

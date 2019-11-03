@@ -12,14 +12,16 @@ var is_highlighted := false setget set_highlight, get_highlight
 
 
 func get_count () -> int:
-	return item.get_count()
+	return count
 
 
 func add_item (dictionary : Dictionary) -> void:
 	if not dictionary.has("item"):
+		push_error("NO ITEM TO ADD")
 		return
 	
 	if not dictionary.has("count"):
+		push_error("NO COUNT TO ADD")
 		return
 	
 	self.item = dictionary["item"]
@@ -34,7 +36,7 @@ func remove_item () -> Dictionary:
 		"count" : count
 	}
 	
-	self.item = null
+	self.item = {}
 	self.count = 0
 	mouse_default_cursor_shape = Control.CURSOR_ARROW
 	return temp
@@ -57,6 +59,11 @@ func toggle_highlight () -> void:
 	set_highlight(!get_highlight())
 
 
+func get_item ():
+	print(item)
+	return item
+
+
 var input_is_enabled = true
 
 
@@ -71,5 +78,6 @@ func _gui_input (event):
 
 
 func _ready ():
+	set_texture(preload("res://icon.png"))
 	add_to_group("Input")
-	print('alive')
+#	print('alive')
