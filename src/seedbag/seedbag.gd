@@ -4,7 +4,16 @@ class_name SeedBag
 
 var _seed : Seed = null
 
+var effect : Dictionary = {}
+
 export var icon : Texture
+
+func set_effect (new_effect_dictionary : Dictionary) -> void:
+	effect = new_effect_dictionary
+
+
+func get_effect () -> Dictionary:
+	return effect
 
 func set_seed (new_seed_dictionary : Dictionary) -> void:
 	_seed = Seed.new(new_seed_dictionary)
@@ -23,6 +32,7 @@ func get_icon () -> Texture:
 
 
 func _init (dictionary : Dictionary):
+	set_effect(dictionary["effect"])
 	set_seed(dictionary["seed"])
 	set_icon(dictionary["icon"])
 
