@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/ground/dirtsowed/dummy64x64.png" type="Texture" id=3]
 
 [resource]
-0/name = "0 dirt64x64"
+0/name = "0 dirtplowed64x64"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )

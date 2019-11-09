@@ -73,9 +73,7 @@ func get_tile_tags (tile : String) -> Array:
 
 
 func is_strict_matching_tags (tile : String, tags : Array) -> bool:
-	print_debug(tile, tags)
 	var tile_tags = get_tile_tags(tile)
-	print_debug(tile_tags)
 	
 	for tag in tags:
 		if not tag in tile_tags:
@@ -96,7 +94,6 @@ func query_tile (tags : Array, position : Vector2, range_vector : Vector2 = Vect
 	for x in range(position.x - range_vector.x, position.x + range_vector.x + 1):
 		for y in range(position.y - range_vector.y, position.y + range_vector.y + 1):
 			for tag_list in tags:
-				print_debug(tag_list)
 				if is_matching(Vector2(x, y), tag_list):
 					result.append(Vector2(x, y))
 					break
@@ -143,18 +140,15 @@ func change_tile (tags_array : Array, position : Vector2) -> void:
 
 func use_item (item : Node, position : Vector2) -> void:
 	if not item:
-		push_error("ITEM IS NULL")
+		print_debug("ITEM IS NULL")
 		return
 	
 	if not item.effect:
-		push_error("ITEM HAS NO EFFECT!")
+		print_debug("ITEM HAS NO EFFECT!")
 		return
-	
-	print(item.effect)
 	
 	if item.effect.type == "change_tile":
 		var tiles = query_tile(item.effect.target.tags, position, item.effect.target.range)
 		for tile in tiles:
-			print_debug(tile)
 			if item.effect.final.type == "tags":
 				change_tile(item.effect.final.tags, tile)

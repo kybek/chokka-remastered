@@ -23,7 +23,7 @@ var data = {
 			"type" : "change_tile",
 			"target" : {
 				"type" : "cell",
-				"tags" : [["dirt"]],
+				"tags" : [["dirt", "sowable"]],
 				"range" : Vector2(1, 1)
 			},
 			"final" : {
