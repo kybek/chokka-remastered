@@ -12,6 +12,14 @@ var apperance_tag_list = [
 	"watered"
 ]
 
+var tag_priority = {
+	"sowed" : 1,
+	"watered" : 2,
+	"plowed" : 3,
+	"dirt" : 4,
+	"grass" : 5
+}
+
 
 var function_tag_dictionary = {
 	"plowable" : {
@@ -21,6 +29,10 @@ var function_tag_dictionary = {
 	"sowable" : {
 		"allowed" : [["dirt", "plowed"]],
 		"not_allowed" : [["grass"], ["dirt", "sowed"]]
+	},
+	"waterable" : {
+		"allowed" : [["dirt", "plowed"]],
+		"not_allowed" : [["watered"], ["grass"]]
 	}
 }
 
@@ -101,39 +113,34 @@ func query_tile (tags : Array, position : Vector2, range_vector : Vector2 = Vect
 	return result
 
 
-#var data = {
-#	"hoe" : {
-#		"name" : "Hoe",
-#		"icon" : load("res://assets/tools/hoe/icon.png"),
-#		"effect" : {
-#			"type" : "change_tile",
-#			"target" : {
-#				"type" : "cell",
-#				"tags" : [["grass", "plowable"], ["dirt", "plowable"]],
-#				"range" : Vector2(0, 0)
-#			},
-#			"final" : {
-#				"type" : "tags",
-#				"tags" : [["dirt"]]
-#			}
-#		}
-#	}
-#}
+func translate_tags (tags_array : Array) -> Array:
+	var tags_no_array : Array
+	
+	for tag in tags_array:
+		if tag_priority.has(tag):
+			tags_no_array.append(tag_priority[tag])
+	
+	tags_no_array.sort()
+	
+	return tags_no_array
 
 
 func change_tile (tags_array : Array, position : Vector2) -> void:
 	var new_tile_id : int = -1
+	
+	var possible_new_tiles = []
 	
 	for tile_id in tilemap.tile_set.get_tiles_ids():
 		var tile_name = tilemap.tile_set.tile_get_name(tile_id)
 		
 		for tags in tags_array:
 			if is_strict_matching_tags(tile_name, tags):
-				new_tile_id = tile_id
-				break
-		
-		if new_tile_id != -1:
-			break
+				possible_new_tiles.append(translate_tags(tags))
+	
+	possible_new_tiles.sort()
+	
+	if len(possible_new_tiles) > 0:
+		new_tile_id = possible_new_tiles[0]
 	
 	tilemap.set_cellv(position, new_tile_id)
 
