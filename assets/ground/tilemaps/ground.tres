@@ -1,10 +1,11 @@
-[gd_resource type="TileSet" load_steps=3 format=2]
+[gd_resource type="TileSet" load_steps=4 format=2]
 
 [ext_resource path="res://assets/ground/dirt/dummy64x64.png" type="Texture" id=1]
 [ext_resource path="res://assets/ground/grass/dummy64x64.png" type="Texture" id=2]
+[ext_resource path="res://assets/ground/dirtsowed/dummy64x64.png" type="Texture" id=3]
 
 [resource]
-0/name = "0 dirt64x64"
+0/name = "0 dirtplowed64x64"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
@@ -24,3 +25,13 @@
 1/navigation_offset = Vector2( 0, 0 )
 1/shapes = [  ]
 1/z_index = 0
+2/name = "2 dirtsowed64x64"
+2/texture = ExtResource( 3 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shapes = [  ]
+2/z_index = 0

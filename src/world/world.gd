@@ -2,7 +2,6 @@ extends YSort
 
 var player : KinematicBody2D = null
 
-
 func move_up () -> void:
 	assert(player)
 	player.move(Vector2(0, -1))
@@ -23,8 +22,19 @@ func move_right () -> void:
 	player.move(Vector2(1, 0))
 
 
+var can_use_item := false
+
+
+func _on_ToolTimer_timeout():
+	can_use_item = true
+
+
 func use_item () -> void:
-	emit_signal("use_item")
+	if can_use_item:
+		can_use_item = false
+		assert(get_node("ToolTimer"))
+		get_node("ToolTimer").start()
+		emit_signal("use_item")
 
 signal use_item
 

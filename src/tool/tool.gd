@@ -1,8 +1,6 @@
 extends Node
 
-class_name SeedBag
-
-var _seed : Seed = null
+class_name Tool
 
 var effect : Dictionary = {}
 
@@ -15,13 +13,6 @@ func set_effect (new_effect_dictionary : Dictionary) -> void:
 func get_effect () -> Dictionary:
 	return effect
 
-func set_seed (new_seed_dictionary : Dictionary) -> void:
-	_seed = Seed.new(new_seed_dictionary)
-
-
-func get_seed () -> Seed:
-	return _seed
-
 
 func set_icon (new_icon : Texture) -> void:
 	icon = new_icon
@@ -33,7 +24,6 @@ func get_icon () -> Texture:
 
 func _init (dictionary : Dictionary):
 	set_effect(dictionary["effect"])
-	set_seed(dictionary["seed"])
 	set_icon(dictionary["icon"])
 
 

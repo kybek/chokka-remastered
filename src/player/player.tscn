@@ -19,7 +19,7 @@ walk_back = ExtResource( 5 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 4, 4 )
 frames = ExtResource( 2 )
-frame = 2
+frame = 6
 speed_scale = 1.75
 playing = true
 

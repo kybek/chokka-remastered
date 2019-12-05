@@ -10,5 +10,5 @@ var data = {
 		"size" : 2,
 		"polen_count" : 1,
 		"seed_count" : 2
-	}
+	},
 }

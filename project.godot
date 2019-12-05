@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
+"class": "ActionManager",
+"language": "GDScript",
+"path": "res://src/actionhandler/actionmanager.gd"
+}, {
+"base": "Node",
 "class": "Dialogue",
 "language": "GDScript",
 "path": "res://src/GoDOS/dialogue.gd"
@@ -48,8 +53,14 @@ _global_script_classes=[ {
 "class": "Stack",
 "language": "GDScript",
 "path": "res://src/utilities/stack/stack.gd"
+}, {
+"base": "Node",
+"class": "Tool",
+"language": "GDScript",
+"path": "res://src/tool/tool.gd"
 } ]
 _global_script_class_icons={
+"ActionManager": "",
 "Dialogue": "",
 "Flower": "",
 "Genes": "",
@@ -57,7 +68,8 @@ _global_script_class_icons={
 "Seed": "",
 "SeedBag": "",
 "Slot": "",
-"Stack": ""
+"Stack": "",
+"Tool": ""
 }
 
 [application]
@@ -101,6 +113,11 @@ move_left={
 toggle_inventory={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777218,"unicode":0,"echo":false,"script":null)
+ ]
+}
+use_item={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
  ]
 }
 

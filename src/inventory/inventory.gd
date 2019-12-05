@@ -3,8 +3,8 @@ extends Node2D
 class_name Inventory
 
 var slots : Array
-var current_slot : int = -1 setget set_current_slot, get_current_slot
-
+var current_slot : int = -1
+var current_light_slot : int = -1
 
 func set_current_slot (slot_no : int) -> void:
 	if slot_no == current_slot:
@@ -25,10 +25,28 @@ func clicked_on_slot (slot_no : int) -> void:
 	set_current_slot(slot_no)
 
 
+func set_light_slot (slot_no : int) -> void:
+	if slot_no == current_light_slot:
+		return
+	
+	if current_light_slot != -1:
+		slots[current_light_slot].toggle_light()
+	
+	current_light_slot = slot_no
+	slots[current_light_slot].toggle_light()
+
+
+func hovered_on_slot (slot_no : int) -> void:
+	set_light_slot(slot_no)
+
+
 func add_item_to_slot (slot_no : int, dictionary : Dictionary) -> void:
 	assert(slot_no >= 0 and slot_no <= 9)
-	
 	slots[slot_no].add_item(dictionary)
+
+
+func get_current_item () -> Dictionary:
+	return slots[get_current_slot()].item
 
 
 func _ready ():
@@ -40,5 +58,6 @@ func _ready ():
 	
 	for slot in slots:
 		slot.connect("clicked_on", self, "clicked_on_slot", [slot.no])
+		slot.connect("hovered_on", self, "hovered_on_slot", [slot.no])
 	
 	set_current_slot(0)

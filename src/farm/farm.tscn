@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/farm/farm.gd" type="Script" id=1]
 [ext_resource path="res://assets/ground/tilemaps/ground.tres" type="TileSet" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://src/player/player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/hud/hud.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/GoDOS/dialoguemanager.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/actionhandler/actionmanager.gd" type="Script" id=8]
 
 [node name="Farm" type="Node2D"]
 script = ExtResource( 1 )
@@ -30,4 +31,7 @@ current = true
 [node name="HUD" parent="World/Player" instance=ExtResource( 6 )]
 
 [node name="Dialogue Manager" parent="." instance=ExtResource( 7 )]
+
+[node name="ActionManager" type="Node" parent="."]
+script = ExtResource( 8 )
 [connection signal="use_item" from="World" to="." method="_on_use_item"]
